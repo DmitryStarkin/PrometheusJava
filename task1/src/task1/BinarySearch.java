@@ -7,16 +7,20 @@ public class BinarySearch {
 		int data[] = { 3, 6, 7, 10, 34, 56, 60 };
 		int numberToFind = 10;
 
-		int i = 0;
-
-		while (i < data.length && numberToFind >= data[i]) {
-			if (numberToFind == data[i]) {
-				System.out.println(i);
+		int len = data.length;
+		int key = len / 2;
+		do {
+			len /= 2;
+			if (data[key] == numberToFind) {
+				System.out.println(key);
 				return;
 			}
-			i++;
-		}
+			if (data[key] > numberToFind) {
+				key = key - len / 2 - 1;
+			} else {
+				key = key + (len + 1) / 2;
+			}
+		} while (len != 0);
 		System.out.println("-1");
 	}
-
 }
