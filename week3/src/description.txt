@@ -151,6 +151,38 @@ public class Suit {
 	}
 }
 
+public class Deck {
+
+	
+	// Перемішує колоду у випадковому порядку
+	public void shuffle() {
+		
+	}
+
+	/*
+	 * Впорядкування колоди за мастями та значеннями Порядок сотрування:
+	 * Спочатку всі карти з мастю SPADES потім CLUBS, DIAMONDS, HEARTS для
+	 * кожної масті порядок наступний: 6, 7, 8, 9, 10, Jack, Queen, King, Ace
+	 * Наприклад SPADES 6 SPADES 7 SPADES 8 SPADES 9 SPADES 10 SPADES Jack
+	 * SPADES Queen SPADES King SPADES Ace І так далі для CLUBS, DIAMONDS,
+	 * HEARTS
+	 */
+	public void order() {
+		
+	}
+
+	// Повертає true у випадку коли в колоді ще доступні карти
+	public boolean hasNext() {
+		
+	}
+	// "Виймає" одну карту з колоди, коли буде видано всі 36 карт повертає null
+	public Card drawOne() {
+		
+	}
+}
+
+
+
  Завдання 3
 
 
