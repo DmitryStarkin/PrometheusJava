@@ -8,7 +8,7 @@ public class MatrixPrint {
 		for (int i = 0; i < sideSize; i++) {
 			for (int j = 0; j < sideSize; j++) {
 
-				if (j == i || j == (sideSize -1 - i)) {
+				if (j == i || j == (sideSize - 1 - i)) {
 					System.out.printf("%2s ", "*");
 				} else {
 					System.out.printf("%2d ", j + delta);
