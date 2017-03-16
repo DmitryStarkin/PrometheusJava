@@ -5,9 +5,9 @@ public class Suit {
 	public static final Suit DIAMONDS = new Suit("DIAMONDS");
 	public static final Suit CLUBS = new Suit("CLUBS");
 	public static final Suit SPADES = new Suit("SPADES");
-	
-	public static Suit[] values = { HEARTS, DIAMONDS, CLUBS, SPADES};
-	
+
+	public static Suit[] values = { HEARTS, DIAMONDS, CLUBS, SPADES };
+
 	private String name;
 
 	Suit(String name) {

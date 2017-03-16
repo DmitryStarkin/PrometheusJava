@@ -33,10 +33,10 @@ public class Deck {
 		int number = 0;
 		for (int i = NUMBER_OF_SUITS - 1; i >= 0; i--) {
 			for (int y = NUMBER_OF_RANKS - 1; y >= 0; y--) {
-				
+
 				deck[number].setRank(Rank.values[y]);
 				deck[number++].setSuit(Suit.values[i]);
-				
+
 			}
 		}
 	}
@@ -49,6 +49,6 @@ public class Deck {
 		if (!hasNext()) {
 			return null;
 		}
-		return deck[CARD_IN_DECK-currentCardPresent--];
+		return deck[CARD_IN_DECK - currentCardPresent--];
 	}
 }
