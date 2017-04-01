@@ -16,11 +16,11 @@ public class Application {
 			if (args[0].charAt(i) == curChar & charCount < MAX_NUMBER_OF_POSITIONS) {
 				charCount++;
 			} else {
-				System.out.printf("%c%s", curChar, charCount == 1 ? "" : String.valueOf(charCount));
+				System.out.printf("%c%c", curChar, charCount == 1 ? "" : String.valueOf(charCount));
 				curChar = args[0].charAt(i);
 				charCount = 1;
 			}
 		}
-		System.out.printf("%c%s\n", curChar, charCount == 1 ? "" : String.valueOf(charCount));
+		System.out.printf("%c%c\n", curChar, charCount == 1 ? "" : String.valueOf(charCount));
 	}
 }
