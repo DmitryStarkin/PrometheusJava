@@ -11,40 +11,40 @@ public class Application {
 		if (rpnString == null || rpnString.isEmpty()) {
 			throw new RPNParserException();
 		}
-		Deque<Double> stek = new LinkedList<Double>();
+		Deque<Double> stack = new LinkedList<Double>();
 		String[] result = rpnString.split(DELIM);
 		for (int i = 0; i < result.length; i++) {
 			if (isNumber(result[i])) {
-				stek.push(new Double(result[i]));
+				stack.push(new Double(result[i]));
 			} else if (isOperator(result[i])) {
-				if (stek.size() < 2) {
+				if (stack.size() < 2) {
 					throw new RPNParserException();
 				}
 				switch (result[i]) {
 				case "+":
-					stek.push(new Double(stek.pop() + stek.pop()));
+					stack.push(new Double(stack.pop() + stack.pop()));
 					break;
 				case "-":
-					stek.push(new Double(-stek.pop() + stek.pop()));
+					stack.push(new Double(-stack.pop() + stack.pop()));
 					break;
 				case "/":
-					if(stek.peek() == 0){
+					if(stack.peek() == 0){
 						throw new ArithmeticException();
 					}
-						stek.push(new Double(1/stek.pop() * stek.pop()));
+						stack.push(new Double(1/stack.pop() * stack.pop()));
 					break;
 				case "*":
-					stek.push(new Double(stek.pop() * stek.pop()));
+					stack.push(new Double(stack.pop() * stack.pop()));
 					break;
 				}
 			} else {
 				throw new RPNParserException();
 			}
 		}
-		if (stek.size() != 1) {
+		if (stack.size() != 1) {
 			throw new RPNParserException();
 		}
-		return stek.pop();
+		return stack.pop();
 	}
 
 	private static boolean isNumber(String string) {
